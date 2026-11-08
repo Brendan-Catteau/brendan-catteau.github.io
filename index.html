@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brendan Catteau – Monteur, cadreur, réalisateur</title>
+<meta name="description" content="Étudiant de 2ème année en RAV à 3iS, à la recherche d'un stage ou d'une alternance en montage, cadrage et réalisation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#161a1f; --surface:#1f252c; --line:#323a43;
+  --text:#e8ecef; --muted:#9aa5b1; --accent:#e0a458; --accent-ink:#1a1306;
+  --max:1080px;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#eef1f3; --surface:#fff; --line:#d3d9de; --text:#161a1f; --muted:#56616d; --accent:#a8661a; --accent-ink:#fff; }
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 "Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;font-stretch:112%}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;margin-bottom:1.5rem}
+h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em}
+p{max-width:62ch}
+p + p{margin-top:1rem}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+.logo{font-weight:800;text-decoration:none;font-stretch:112%}
+nav a{margin-left:1.25rem;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--text)}
+
+.hero{padding:2rem 0 3rem}
+.hero p.lead{margin:1.25rem 0 2rem;font-size:1.2rem;color:var(--muted)}
+.status{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:.3rem .8rem;border-radius:99px;font-size:.95rem;margin-bottom:1.25rem}
+
+
+
+
+.frame{position:relative;aspect-ratio:16/9;background:#000;border-radius:4px;overflow:hidden}
+.frame iframe,.frame .placeholder{position:absolute;inset:0;width:100%;height:100%;border:0}
+.placeholder{display:grid;place-items:center;text-align:center;color:#9aa5b1;padding:1rem;background:repeating-linear-gradient(135deg,#0c0e11 0 14px,#11151a 14px 28px)}
+.placeholder strong{display:block;color:#e8ecef;margin-bottom:.25rem}
+
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:4px}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;color:var(--text);border:1px solid var(--line)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn.ghost:hover{border-color:var(--text)}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+
+.projects{display:grid;gap:3rem}
+.project{display:grid;gap:1rem}
+.project .meta{display:flex;flex-wrap:wrap;gap:.5rem 1rem;color:var(--muted);font-size:.95rem}
+.role{color:var(--accent);font-weight:600}
+
+.about{display:grid;gap:2rem}
+@media(min-width:760px){ .about{grid-template-columns:260px 1fr;gap:3rem} }
+.photo{aspect-ratio:3/4;background:var(--surface);border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:1rem}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.tools{display:grid;gap:1.25rem;margin-top:1.5rem}
+@media(min-width:600px){ .tools{grid-template-columns:1fr 1fr} }
+.tools h3{font-size:1rem;margin-bottom:.4rem}
+.tools ul{list-style:none;padding:0;color:var(--muted)}
+
+.contact p{margin-bottom:1.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#">Brendan Catteau</a>
+    <nav aria-label="Navigation principale">
+      <a href="#projets">Projets</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ACCUEIL + SHOWREEL -->
+    <div class="hero">
+      <span class="status">Disponible : stage de Janvier à Mars 2027 et alternance à partir de Septembre 2027 </span>
+      <h1>Monteur, cadreur, réalisateur.</h1>
+      <p class="lead">Étudiant polyvalent, passionné par le cinéma et les nouvelles technologies. Curieux et déterminé à mener à bien un projet audiovisuel.</p>
+
+      <div class="frame" aria-label="Showreel">
+        <iframe src="https://www.youtube.com/embed/jKfJYJEytAU" allow="fullscreen; picture-in-picture" allowfullscreen title="Showreel"></iframe>
+      </div>
+
+      <p style="margin-top:1.75rem">
+        <a class="btn" href="#contact">Me contacter</a>
+        <a class="btn ghost" href="Cv - Brendan Catteau.pdf" download>Télécharger mon CV</a>
+      </p>
+    </div>
+
+    <section id="projets">
+      <h2>Projets</h2>
+      <div class="projects">
+
+        <article class="project">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/tUSZ2Bjog1w" allow="fullscreen; picture-in-picture" allowfullscreen title="The Keeper"></iframe>
+          </div>
+          <h3>The Keeper</h3>
+          <div class="meta"><span class="role">Rôle : Réalisateur, Monteur</span><span>Court-métrage</span><span>2026</span><span>Équipe de 5 personnes</span></div>
+          <p>The Keeper est un Court Métrage en anglais ; 3 élèves, dont un français et 2 anglais, visitent une phares qui semble vide. Tout ne se passe pas comme prévu.</p>
+        </article>
+
+        <article class="project">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/UI0g2c8khho" allow="fullscreen; picture-in-picture" allowfullscreen title="L'Inconnu"></iframe>
+          </div>
+          <h3>L'Inconnu</h3>
+          <div class="meta"><span class="role">Rôle : Co-Réalisateur, Monteur</span><span>Court-métrage</span><span>2026</span><span>48h Challenge</span></div>
+          <p>Court métrage réalisé dans le cadre du 48h Challenge 3iS 2026</p>
+          <p>Thème : Invisible
+          <br>Objet : Parapluie
+          <br>Ligne imposée : "Am I supposed to like this?"</p>
+        </article>
+
+        <article class="project">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/24kbAA0801s" allow="fullscreen; picture-in-picture" allowfullscreen title="Seulement Nous"></iframe>
+          </div>
+          <h3>Seulement Nous</h3>
+          <div class="meta"><span class="role">Rôle : Co-Réalisateur, Monteur</span><span>Court-métrage</span><span>2026</span><span>Totem 3iS</span></div>
+          <p>Parfois le reste du monde n'existe plus. <br> Il ne reste que l'instant, le silence et seulement nous.
+          <br>Réalisé dans le cadre du Totem n°4 de 3iS où les élèves n'ont que 4 jours pour faire une court-métrage.</p>
+          <p>Thème : Sociologie et Narration
+          <br>Contrainte : Voix Off</p>
+        </article>
+
+        <article class="project">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/MJZmcfl1jpI" allow="fullscreen; picture-in-picture" allowfullscreen title="Pas Dans Un Film"></iframe>
+          </div>
+          <h3>Pas Dans Un Film</h3>
+          <div class="meta"><span class="role">Rôle : Réalisateur</span><span>Court-métrage</span><span>2025</span><span>Fausse Pub</span></div>
+          <p>Machinima qui à gagné le concours de court-métrage BeamNG.Drive organisé par Steelorse</p>
+          <p>Thème : Sécurité Routière
+          <br>Contrainte : Intégrer un image de cheval imposée</p>
+          <div class="meta"><span>Un machinima est un film réalisé à partir d’un moteur de jeu vidéo : on utilise l’univers, les personnages et la caméra du jeu pour raconter une histoire, au lieu de tourner avec de vrais acteurs ou de l’animation classique. Le mot vient de "machine" et "cinéma"</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="apropos">
+      <h2>À propos</h2>
+      <div class="about">
+        <div class="photo">
+          <img src="FAB_Brendan.jpg" alt="Portrait de Brendan Catteau">
+        </div>
+        <div>
+          <p>Dès l’instant où j’ai eu un ordinateur et une caméra entre les mains, j’ai voulu créer et partager. Ma curiosité m’a poussé à en apprendre toujours plus sur le montage et la réalisation.</p>
+          <p>Aujourd’hui, j’aime la sensation de donner vie à une œuvre audiovisuelle, sous toutes ses formes.</p>
+          <p>Étudiant en audiovisuel à 3iS, je recherche un stage ou une alternance pour 2027 en montage et cadrage afin de progresser au contact de professionnels et de mettre ma créativité au service de vos projets.</p>
+          <div class="tools">
+            <div>
+              <h3>Logiciels</h3>
+              <ul><li>Premiere Pro</li><li>DaVinci Resolve</li><li>Photoshop</li></ul>
+            </div>
+            <!--<div>
+              <h3>Matériel</h3>
+              <ul><li>Caméra : [modèle]</li><li>Optiques : [focales]</li><li>Son et stabilisateur : [modèles]</li></ul>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Une offre de stage ou d'alternance, un projet à tourner ? Contactes-moi, je réponds en 48 h.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:catteau.brendan@gmail.com">catteau.brendan@gmail.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/brendan-catteau/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://www.instagram.com/brendan.catteau/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn ghost" href="https://www.youtube.com/@Brendanctt" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Brendan Catteau</footer>
+</div>
+
+</body>
+</html>

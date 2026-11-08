@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brendan Catteau – Monteur, cadreur, réalisateur</title>
+<title>Brendan Catteau – Monteur, Cadreur, Réalisateur</title>
 <meta name="description" content="Étudiant de 2ème année en RAV à 3iS, à la recherche d'un stage ou d'une alternance en montage, cadrage et réalisation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +27,14 @@ h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;line-height:1.05;letter-spac
 h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;font-stretch:112%}
 h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;margin-bottom:1.5rem}
 h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em}
+.nw{white-space:nowrap}
 p{max-width:62ch}
 p + p{margin-top:1rem}
 
 header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
 .logo{font-weight:800;text-decoration:none;font-stretch:112%}
-nav a{margin-left:1.25rem;text-decoration:none;color:var(--muted)}
+nav{display:flex;gap:1.25rem}
+nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--text)}
 
 .hero{padding:2rem 0 3rem}
@@ -72,6 +74,25 @@ section{padding:3.5rem 0;border-top:1px solid var(--line)}
 .contact p{margin-bottom:1.5rem}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+/* ===== Mobile ===== */
+@media (max-width:640px){
+  body{font-size:1rem}
+  .wrap{padding:0 1rem}
+  header.top{flex-direction:column;align-items:flex-start;gap:.4rem;padding:1rem 0 .5rem}
+  .logo{white-space:nowrap}
+  nav{gap:1.1rem}
+  nav a{padding:.3rem 0}
+  .hero{padding:1rem 0 2rem}
+  .status{border-radius:14px;font-size:.9rem;line-height:1.4}
+  h1{font-size:calc((100vw - 2rem) / 11.5)}
+  .hero p.lead{font-size:1.05rem;margin:1rem 0 1.5rem}
+  section{padding:2.5rem 0}
+  .projects{gap:2.25rem}
+  .actions .btn{flex:1 1 100%;text-align:center;overflow-wrap:anywhere}
+  .contact .actions .btn.ghost{flex:1 1 calc(50% - .4rem)}
+  .photo{max-width:260px}
+}
 </style>
 </head>
 <body>
@@ -90,17 +111,17 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
     <!-- ACCUEIL + SHOWREEL -->
     <div class="hero">
       <span class="status">Disponible : stage de Janvier à Mars 2027 et alternance à partir de Septembre 2027 </span>
-      <h1>Monteur, cadreur, réalisateur.</h1>
+      <h1><span class="nw">Monteur, Cadreur,</span> <span class="nw">Réalisateur.</span></h1>
       <p class="lead">Étudiant polyvalent, passionné par le cinéma et les nouvelles technologies. Curieux et déterminé à mener à bien un projet audiovisuel.</p>
 
       <div class="frame" aria-label="Showreel">
         <iframe src="https://www.youtube.com/embed/jKfJYJEytAU" allow="fullscreen; picture-in-picture" allowfullscreen title="Showreel"></iframe>
       </div>
 
-      <p style="margin-top:1.75rem">
+      <div class="actions" style="margin-top:1.75rem">
         <a class="btn" href="#contact">Me contacter</a>
-        <a class="btn ghost" href="Cv - Brendan Catteau.pdf" download>Télécharger mon CV</a>
-      </p>
+        <a class="btn ghost" href="Cv-Brendan-Catteau.pdf" download>Télécharger mon CV</a>
+      </div>
     </div>
 
     <section id="projets">
